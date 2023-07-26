@@ -1,0 +1,35 @@
+body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
