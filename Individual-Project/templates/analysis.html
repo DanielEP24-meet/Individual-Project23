@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Famous</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style6.css') }}">
 </head>
 <body>
-    {% for photo in photos %}
-        <img src="{{ url_for('static' , filename=photo) }}"/>
-    {% endfor %}
-    <p>Result: {{ result }}</p>
+    <div class="photos-container">
+        {% for photo in photos %}
+            <img src="{{ url_for('static', filename=photo) }}" alt="Uploaded Photo">
+        {% endfor %}
+    </div>
 
-    <a href="/similaritys/{{ uname }}">View All Results</a>
+    <p class="result">Result: {{ result }}</p>
+
+    <a href="/similaritys/{{ uname }}" class="view-all-results">View All Results</a>
+    <a href="/homePage" class="back-button">Back to Home</a>
 </body>
 </html>

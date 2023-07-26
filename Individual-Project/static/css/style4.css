@@ -1,0 +1,66 @@
+body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .upload-form {
+            display: inline-block;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .upload-form input[type="file"] {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            margin: 8px 0;
+            border-radius: 3px;
+            width: 250px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .upload-form input[type="submit"] {
+            background-color: #777;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 3px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .upload-form input[type="submit"]:hover {
+            background-color: #999;
+        }
+
+        .error-message {
+            font-size: 18px;
+            color: #ff4444;
+            margin-top: 20px;
+        }
+         .back-button {
+            display: inline-block;
+            background-color: #777;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-top: 20px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #999;
+        }

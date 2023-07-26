@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style4.css') }}">
 </head>
 <body>
-    <form action="/famousSimilarity" method=post enctype=multipart/form-data>
-      <input type=file name=file>
-      <input type=submit value=Upload>
-    </form>
-
+    <div class="upload-form">
+        <form action="/famousSimilarity" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+    <a href="/homePage" class="back-button">Back to Home</a>
     {% if error %}
-        <p> An upload Error Ocurred, Please refresh and try again</p>
+        <p class="error-message">An upload error occurred. Please refresh and try again.</p>
     {% endif %}
 
 </body>

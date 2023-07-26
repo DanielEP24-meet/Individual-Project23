@@ -1,13 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask import session as login_session
 import pyrebase
+import os
+import pleasework as backend
+from werkzeug.utils import secure_filename
 
-<<<<<<< Updated upstream
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config['SECRET_KEY'] = 'super-secret-key'
 
-#Code goes below here
-=======
+
 
 
 UPLOAD_FOLDER = 'static/Upload_Folder'
@@ -135,7 +136,6 @@ def comapre():
         # except:
         #     return render_template('similarity.html', error='Upload Falied')
     return render_template('similarity.html' , error="")
->>>>>>> Stashed changes
 
 @app.route('/similaritys/<string:user>' , methods=['GET' , 'POST'])
 def similarity(user):

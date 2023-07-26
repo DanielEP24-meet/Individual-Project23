@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style7.css') }}">
 </head>
 <body>
     {% if error %}
-        <p>An Error has occured, are you sure you are logged in?</p>>
-
+        <p class="error-message">An error has occurred. Are you sure you are logged in?</p>
     {% else %}
-        {% for dataset in data %}
-            {% if 'image2' in data[dataset]['imgpath'] %}
-                <img src="{{ url_for( 'static' , filename=data[dataset]['imgpath']['image1']) }}"/>
-                <img src="{{ url_for( 'static' , filename=data[dataset]['imgpath']['image2']) }}"/>
-                <p>{{ data[dataset]['score'] }}</p>
-            {% else %}
-                    <img src="{{ url_for( 'static' , filename=data[dataset]['imgpath']['image1']) }}"/>
-                    <p>{{ data[dataset]['score'] }}</p>
-            {% endif %}
-        {% endfor %}
+        <div class="photos-container">
+            {% for dataset in data %}
+                {% if 'image2' in data[dataset]['imgpath'] %}
+                    <div class="photos-set">
+                        <img src="{{ url_for( 'static' , filename=data[dataset]['imgpath']['image1']) }}" alt="Image 1">
+                        <img src="{{ url_for( 'static' , filename=data[dataset]['imgpath']['image2']) }}" alt="Image 2">
+                        <p class="score">Score: {{ data[dataset]['score'] }}</p>
+                    </div>
+                {% else %}
+                    <div class="photos-set">
+                        <img src="{{ url_for( 'static' , filename=data[dataset]['imgpath']['image1']) }}" alt="Image">
+                        <p class="score">Score: {{ data[dataset]['score'] }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     {% endif %}
+
+    <a href="/homePage" class="back-button">Back to Home</a>
 </body>
 </html>
